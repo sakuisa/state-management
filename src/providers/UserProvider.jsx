@@ -2,7 +2,7 @@ import React, { createContext } from "react";
 
 export const UserContext = createContext({});
 
-export const UserProcider = (props) => {
+export const UserProvider = (props) => {
   const { children } = props;
   const contextName = "さく";
   return (
