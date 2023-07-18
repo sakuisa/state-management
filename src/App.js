@@ -1,11 +1,11 @@
-import { UserProcider } from "./prviders/UserProvider";
+import { UserProvider } from "./providers/UserProvider";
 import { Router } from "./router/Router";
 import "./styles.css";
 
 export default function App() {
   return (
-    <UserProcider>
+    <UserProvider>
       <Router />;
-    </UserProcider>
+    </UserProvider>
   );
 }
