@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useLocation } from "react-router-dom";
 import { SearchInput } from "../molecules/SearchInput";
 import { UserCard } from "../organisms/user/UserCard";
 
@@ -12,22 +11,20 @@ const users = [...Array(10).keys()].map((val) => {
     email: "12345@example.com",
     phone: "090-1111-2222",
     company: {
-      name: "testcampany"
+      name: "testcampany",
     },
-    website: "https://google.com"
+    website: "https://google.com",
   };
 });
 
 export const Users = () => {
-  const { state } = useLocation();
-  const isAdmin = state ? state.isAdmin : false;
   return (
     <SConainer>
       <h2>ユーザー一覧</h2>
       <SearchInput />
       <SUserArea>
         {users.map((user) => (
-          <UserCard key={user.id} user={user} isAdmin={isAdmin} />
+          <UserCard key={user.id} user={user} />
         ))}
       </SUserArea>
     </SConainer>
