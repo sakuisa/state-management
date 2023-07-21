@@ -5,7 +5,7 @@ import "./styles.css";
 export default function App() {
   return (
     <UserProvider>
-      <Router />;
+      <Router />
     </UserProvider>
   );
 }
